@@ -1,0 +1,73 @@
+<resources>
+    <!-- Difficulty Preference -->
+    <string-array name="difficulties_entries">
+        <item>Any</item>
+        <item>Hard</item>
+        <item>Medium</item>
+        <item>Easy</item>
+    </string-array>
+
+    <string-array name="difficulties_values">
+        <item>any_difficulty</item>
+        <item>hard</item>
+        <item>medium</item>
+        <item>easy</item>
+    </string-array>
+
+    <!-- Category Preference -->
+    <string-array name="categories_entries">
+        <item>Any Category</item>
+        <item>General Knowledge</item>
+        <item>Entertainment: Books</item>
+        <item>Entertainment: Film</item>
+        <item>Entertainment: Music</item>
+        <item>Entertainment: Musicals &amp; Theatres</item>
+        <item>Entertainment: Television</item>
+        <item>Entertainment: Video Games</item>
+        <item>Entertainment: Board Games</item>
+        <item>Science &amp; Nature</item>
+        <item>Science: Computers</item>
+        <item>Science: Mathematics</item>
+        <item>Mythology</item>
+        <item>Sports</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Politics</item>
+        <item>Art</item>
+        <item>Celebrities</item>
+        <item>Animals</item>
+        <item>Vehicles</item>
+        <item>Entertainment: Comics</item>
+        <item>Science: Gadgets</item>
+        <item>Entertainment: Japanese Anime &amp; Manga</item>
+        <item>Entertainment: Cartoon &amp; Animations</item>
+    </string-array>
+
+    <string-array name="categories_values">
+        <item>any_category</item>
+        <item>general_knowledge</item>
+        <item>entertainment_books</item>
+        <item>entertainment_film</item>
+        <item>entertainment_music</item>
+        <item>entertainment_musicals,theatres</item>
+        <item>entertainment_television</item>
+        <item>entertainment_video_games</item>
+        <item>entertainment_board_games</item>
+        <item>science_nature</item>
+        <item>science_computers</item>
+        <item>science_mathematics</item>
+        <item>mythology</item>
+        <item>sports</item>
+        <item>geography</item>
+        <item>history</item>
+        <item>politics</item>
+        <item>art</item>
+        <item>celebrities</item>
+        <item>animals</item>
+        <item>vehicles</item>
+        <item>entertainment_comics</item>
+        <item>science_gadgets</item>
+        <item>entertainment_japanese_anime_manga</item>
+        <item>entertainment_cartoon_animations</item>
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">One day, one question</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!--Settings-->
+    <string name="difficulty">Choose the difficulty of the daily question</string>
+    <string name="category">Choose the category of the daily question</string>
+    <string name="time">Choose the time of the daily question</string>
+</resources>

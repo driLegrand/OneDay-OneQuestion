@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10pt"/>
+
+    <TextView
+        android:id="@+id/preference_difficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"
+        android:textColor="@color/black"/>
+
+    <Spinner
+        android:id="@+id/preference_difficulty_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10pt"/>
+
+    <TextView
+        android:id="@+id/preference_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textColor="@color/black"/>
+
+    <Spinner
+        android:id="@+id/preference_category_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10pt"/>
+
+    <TextView
+        android:id="@+id/preference_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textColor="@color/black"/>
+
+    <android.widget.TimePicker
+        android:id="@+id/preference_time_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"/>
+
+    <TextView
+        android:id="@+id/editWelcomeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose the message that will be displayed in the main page of the application :"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/editWelcomeMessage_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Welcome in 'One day, One question'"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_margin="2pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quit" />
+
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2pt"
+            android:text="Quit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

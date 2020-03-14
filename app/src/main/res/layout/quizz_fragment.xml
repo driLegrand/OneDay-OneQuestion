@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Quizz">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:layout_margin="5pt"
+                android:text="Choose one of the following categories in order to have a quizz about it." />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="General Knowledge" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Books" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Film" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Music" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Musicals &amp; Theatres" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Television" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Video Games" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Board Games" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Science &amp; Nature" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Science: Computers" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Science: Mathematics" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Mythology" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Sports" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Geography" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="History" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Politics" />
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Art" />
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Celebrities" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Animals" />
+
+            <Button
+                android:id="@+id/button28"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Vehicles" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Comics" />
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Science: Gadgets" />
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Japanese Anime &amp; Manga" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:layout_margin="2pt"
+                android:text="Entertainment: Cartoon &amp; Animations" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
