@@ -14,14 +14,4 @@
             android:textColor="@android:color/black"
             android:textSize="100sp" />
 
-        <TextView
-            android:id="@+id/welcomeMessage"
-            android:textSize="50sp"
-            android:layout_marginTop="40pt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            android:text="TextView" />
-
 </FrameLayout>

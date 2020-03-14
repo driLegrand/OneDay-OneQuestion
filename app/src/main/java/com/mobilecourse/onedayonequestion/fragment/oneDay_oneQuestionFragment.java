@@ -1,5 +1,6 @@
 package com.mobilecourse.onedayonequestion.fragment;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -39,7 +41,6 @@ public class oneDay_oneQuestionFragment extends Fragment {
         View view =  inflater.inflate(R.layout.one_day_one_question_fragment, container, false);
 
         mTextViewCountDown = view.findViewById(R.id.text_view_countdown);
-        TextView welcomeMessage = view.findViewById(R.id.welcomeMessage);
 
         //Initialize countdown timer at the remaining time before quizz start and start it
         SharedPreferences prefs =
@@ -64,10 +65,17 @@ public class oneDay_oneQuestionFragment extends Fragment {
 
         //display of the welcome message from the shared preferences
         String welcomeMessage_value = prefs.getString("welcomeMessage","Welcome in 'One day, One question'");
-        if (welcomeMessage_value == ""){
+        if (welcomeMessage_value.equals("")){
             welcomeMessage_value = "Welcome in 'One day, One question'";
         }
-        welcomeMessage.setText(welcomeMessage_value);
+
+        Context context = getContext();
+        CharSequence text = welcomeMessage_value;
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
 
         return view;
     }

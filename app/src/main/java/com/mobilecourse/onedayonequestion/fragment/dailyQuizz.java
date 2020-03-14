@@ -38,9 +38,9 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class dailyQuizz extends Fragment {
 
-    SharedPreferences prefs;
+    private SharedPreferences prefs;
 
-    public static dailyQuizz newInstance() {
+    static dailyQuizz newInstance() {
         return new dailyQuizz();
     }
 
@@ -63,6 +63,7 @@ public class dailyQuizz extends Fragment {
         Date completeDate = new Date();
         CharSequence formatDate  = DateFormat.format("MMMM d, yyyy ", completeDate.getTime());
 
+
         //In this case, the player has already answered the question of the day
         if (prefs.getString("Done","Error").equals("Ok") && prefs.getString("dailyDate","Error").equals(formatDate+"")){
             message.setText("You had already answer the question today.");
@@ -71,6 +72,7 @@ public class dailyQuizz extends Fragment {
             falsebtn.setVisibility(View.INVISIBLE);
             truebtn.setVisibility(View.INVISIBLE);
             dailyQuestion.setVisibility(View.INVISIBLE);
+            Log.i("Ad","Merde");
         }
         else{
             //We display the question of the day
@@ -93,41 +95,41 @@ public class dailyQuizz extends Fragment {
                     answerTrue(v);
                 }
             });
+            Log.i("Ad","Ok");
 
-            if (!prefs.getString("dailyQuestion","Error").equals("Error") ){
-                //if we already have load the question of the day
-                if (!prefs.getString("dailyDate","Error").equals(completeDate  + "")){
-                    prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            Log.i("Ad",completeDate+"");
+            //if we haven't load the question of the day
+            if (!prefs.getString("dailyDate","Error").equals(formatDate  + "")){
+                prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-                    String category = "&category=" + prefs.getInt("category",0);
-                    String difficulty = "&difficulty=" + prefs.getString("difficulty","any").toLowerCase();
-                    if (difficulty.equals("&difficulty=any")){
-                        difficulty="";
-                    }
-                    if (category.equals("&category=8")){
-                        category="";
-                    }
-
-                    message.setVisibility(View.INVISIBLE);
-                    falsebtn.setVisibility(View.INVISIBLE);
-                    truebtn.setVisibility(View.INVISIBLE);
-                    dailyQuestion.setVisibility(View.INVISIBLE);
-                    loading.setVisibility(View.VISIBLE);
-
-                    //ask the JSON containing the daily question
-                    (new AsyncFlickrJSONData()).execute("https://opentdb.com/api.php?amount=1&type=boolean" + category + difficulty);
+                String category = "&category=" + prefs.getInt("category",0);
+                String difficulty = "&difficulty=" + prefs.getString("difficulty","any").toLowerCase();
+                if (difficulty.equals("&difficulty=any")){
+                    difficulty="";
                 }
-                else{
-                    //load the question from the shared preferences
-                    dailyQuestion.setText(prefs.getString("dailyQuestion","Error").replace("&quot;", "'").replace("&#039;","'"));
+                if (category.equals("&category=8")){
+                    category="";
                 }
+
+                message.setVisibility(View.INVISIBLE);
+                falsebtn.setVisibility(View.INVISIBLE);
+                truebtn.setVisibility(View.INVISIBLE);
+                dailyQuestion.setVisibility(View.INVISIBLE);
+                loading.setVisibility(View.VISIBLE);
+
+                //ask the JSON containing the daily question
+                (new AsyncFlickrJSONData()).execute("https://opentdb.com/api.php?amount=1&type=boolean" + category + difficulty);
+            }
+            else{
+                //load the question from the shared preferences
+                dailyQuestion.setText(prefs.getString("dailyQuestion","Error").replace("&quot;", "'").replace("&#039;","'"));
             }
         }
 
         return view;
     }
 
-    public  void answerTrue(View view){
+    private  void answerTrue(View view){
         prefs = getActivity().getSharedPreferences(null, Context.MODE_PRIVATE);
 
         Date completeDate = new Date();
@@ -148,7 +150,7 @@ public class dailyQuizz extends Fragment {
             prefs.edit().putString("Done","Ok").apply();
         }
     }
-    public  void answerFalse(View view) {
+    private  void answerFalse(View view) {
         prefs = getActivity().getSharedPreferences(null, Context.MODE_PRIVATE);
 
         Date completeDate = new Date();
@@ -185,7 +187,7 @@ public class dailyQuizz extends Fragment {
         protected JSONObject doInBackground(String... strings) {
 
             //ask for the JSON
-            URL url = null;
+            URL url;
             HttpsURLConnection urlConnection = null;
             String result = null;
             try {
@@ -244,12 +246,11 @@ public class dailyQuizz extends Fragment {
 
             Button falsebtn = getActivity().findViewById(R.id.False);
             Button truebtn = getActivity().findViewById(R.id.True);
-            TextView dailyquestion = getActivity().findViewById(R.id.dailyQuestion);
             ProgressBar loading = getActivity().findViewById(R.id.loadingDaily);
 
             falsebtn.setVisibility(View.VISIBLE);
             truebtn.setVisibility(View.VISIBLE);
-            dailyquestion.setVisibility(View.VISIBLE);
+            dailyQuestion.setVisibility(View.VISIBLE);
             loading.setVisibility(View.INVISIBLE);
         }
     }

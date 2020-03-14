@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.activity_main_nav_view);
+        NavigationView navigationView = findViewById(R.id.activity_main_nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -135,7 +135,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onStop() {
         super.onStop();
-        shakeDetector.destroy(getBaseContext());
+        if (shakeDetector.isRunning()){
+            shakeDetector.destroy(getBaseContext());
+        }
     }
 
     @Override
@@ -186,13 +188,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //Configure Toolbar
     private void configureToolBar() {
-        this.toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
+        this.toolbar = findViewById(R.id.activity_main_toolbar);
         setSupportActionBar(toolbar);
     }
 
     //Configure Drawer Layout
     private void configureDrawerLayout() {
-        this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
+        this.drawerLayout = findViewById(R.id.activity_main_drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -200,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //Configure NavigationView
     private void configureNavigationView() {
-        this.navigationView = (NavigationView) findViewById(R.id.activity_main_nav_view);
+        this.navigationView = findViewById(R.id.activity_main_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
